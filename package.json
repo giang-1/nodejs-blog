@@ -26,7 +26,7 @@
     "src/**/*.{js,json,scss}": "prettier --write --single-quote --trailing-comma all --tab-width 4"
   },
   "husky": {
-    "hook": {
+    "hooks": {
       "pre-commit": "lint-staged"
     }
   },
