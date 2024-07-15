@@ -11,7 +11,7 @@ const route = require('./routes/index');
 const app = express();
 const port = 3000;
 
-app.use(morgan('combined'))
+app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.engine(
@@ -19,11 +19,11 @@ app.engine(
     handlebars.engine({
         extname: 'hbs',
     }),
-)
-app.set("view engine", 'hbs');
-app.set("views", path.join(__dirname, 'resources/views'));
+);
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'resources/views'));
 
-route(app);
+route(app)
 
 app.listen(port, () => {
     console.log(`Example app listening on port http://localhost:${port}/`);
