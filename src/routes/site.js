@@ -3,7 +3,7 @@ const router = express.Router();
 
 const siteController = require('../app/controllers/siteControllers');
 
-router.use('/:slug', siteController.show);
-router.use('/', siteController.index);
+router.get('/:slug', siteController.show);
+router.get('/', siteController.index);
 
 module.exports = router;

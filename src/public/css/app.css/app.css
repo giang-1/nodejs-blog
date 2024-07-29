@@ -1,2 +1,8 @@
 h1 {
-  color: #1c31f2; }
+  color: #1c31f2;
+}
+
+.select-all-option {
+  width: 140px;
+  margin: 0 8;
+}

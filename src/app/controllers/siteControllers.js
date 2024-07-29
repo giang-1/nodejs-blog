@@ -1,6 +1,14 @@
+const { mutiMongooseToObject } = require('../../ulti/mongoose')
+const Course = require('../models/course')
+
+
 class SiteController {
-    index(req, res) {
-        res.render('home');
+    async index(req, res, next) {
+        Course.find({})
+            .then(courses => {
+                res.render('home', { courses: mutiMongooseToObject(courses) })
+            })
+            .catch(next)
     }
 
     //GET /NEW:SLUG
